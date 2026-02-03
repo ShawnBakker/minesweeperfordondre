@@ -1,9 +1,4 @@
-# 💣 Minesweeper // Dark Terminal
-
-[![CI](https://github.com/YOUR_USERNAME/minesweeper-dark/actions/workflows/ci.yml/badge.svg)](https://github.com/YOUR_USERNAME/minesweeper-dark/actions/workflows/ci.yml)
-
-A dark-themed Minesweeper with a terminal/CRT aesthetic. Built with React 18, TypeScript, Tailwind CSS, and Vite.
-
+# Minesweeper // Dark Terminal
 ## Features
 
 - **Three difficulties** — Beginner (9×9), Intermediate (16×16), Expert (16×30)
