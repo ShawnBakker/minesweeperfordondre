@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /* Prevent text selection on the game board for cleaner right-click flagging */
+  .no-select {
+    -webkit-user-select: none;
+    user-select: none;
+  }
+
+  /* Scanline overlay for that retro CRT feel */
+  .scanlines::after {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background: repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 2px,
+      rgba(0, 0, 0, 0.03) 2px,
+      rgba(0, 0, 0, 0.03) 4px
+    );
+    pointer-events: none;
+    z-index: 50;
+  }
+
+  /* Subtle grid pattern on the background */
+  .grid-bg {
+    background-image:
+      linear-gradient(rgba(0, 229, 255, 0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(0, 229, 255, 0.03) 1px, transparent 1px);
+    background-size: 40px 40px;
+  }
+}
+
+@layer components {
+  .cell-btn {
+    @apply relative flex items-center justify-center
+           font-mono font-bold text-sm
+           transition-all duration-100 ease-out
+           border border-surface-600;
+  }
+
+  .cell-btn.unrevealed {
+    @apply bg-surface-700 hover:bg-surface-600 
+           cursor-pointer active:scale-95
+           hover:border-accent-cyan/30;
+  }
+
+  .cell-btn.revealed {
+    @apply bg-surface-800/80 cursor-default;
+  }
+
+  .cell-btn.mine-hit {
+    @apply bg-accent-red/20 border-accent-red/50;
+  }
+
+  .cell-btn.flagged {
+    @apply bg-surface-700 border-accent-amber/40;
+  }
+}
