@@ -7,8 +7,6 @@
 - **Flag toggling** — right-click to place/remove flags
 - **Timer & mine counter** — track your speed and remaining mines
 - **Dark terminal aesthetic** — CRT scanlines, grid background, glowing accents
-- **Fully tested** — game engine unit tests + React component tests
-- **CI/CD** — GitHub Actions pipeline: typecheck → test → build
 
 ## Quick Start
 
