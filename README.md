@@ -4,8 +4,6 @@
 
 A dark-themed Minesweeper with a terminal/CRT aesthetic. Built with React 18, TypeScript, Tailwind CSS, and Vite.
 
-**🕹️ [Play it live →](https://YOUR_USERNAME.github.io/minesweeper-dark/)**
-
 ## Features
 
 - **Three difficulties** — Beginner (9×9), Intermediate (16×16), Expert (16×30)
@@ -91,20 +89,6 @@ The game logic is separated from the UI:
 - **Vitest** — testing
 - **Testing Library** — React component tests
 - **GitHub Actions** — CI/CD + GitHub Pages deploy
-
-## Hosting on GitHub Pages
-
-The CI workflow automatically deploys to GitHub Pages on every push to `main`, but you need to flip one setting first:
-
-1. Go to your repo → **Settings** → **Pages**
-2. Under **Source**, select **GitHub Actions**
-3. Push to `main` — the workflow will typecheck → test → build → deploy
-4. Your site will be live at `https://YOUR_USERNAME.github.io/minesweeper-dark/`
-
-That's it. The workflow handles everything else automatically:
-- It reads the repo name at build time to set Vite's `base` path, so asset URLs resolve correctly under the `/minesweeper-dark/` subpath.
-- The deploy job only runs on `main` (not on PRs), and only after all CI checks pass.
-- The `concurrency` setting ensures deployments don't race each other.
 
 ## License
 
