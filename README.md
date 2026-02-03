@@ -63,11 +63,9 @@ minesweeper-dark/
 
 ## Architecture
 
-The game logic is separated from the UI:
+- **`engine.ts`** — Pure functions: `createGame()`, `revealCell()`, `toggleFlag()`, `chordReveal()`. 
 
-- **`engine.ts`** — Pure functions: `createGame()`, `revealCell()`, `toggleFlag()`, `chordReveal()`. No side effects, no DOM. Every function takes a `GameState` and returns a new `GameState` (immutable). This makes it trivially testable.
-
-- **`App.tsx`** — React UI that calls engine functions via `useState` + `useCallback`. The board is rendered as a CSS Grid of buttons.
+- **`App.tsx`** — React UI that calls engine functions via `useState` + `useCallback`. 
 
 - **`useTimer.ts`** — A small hook that starts/stops/resets based on the game status.
 
